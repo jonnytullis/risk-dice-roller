@@ -6,8 +6,10 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - risk-dice-roller',
-    title: 'risk-dice-roller',
+    titleTemplate: '%s',
+    title: 'RISK | Dice Roller',
+    description: 'Speed up your game of RISK! Don\'t spend hours rolling dice.' +
+      ' Quickly resolve your battles and enjoy the strategy of the game.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -45,7 +47,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -53,7 +55,7 @@ export default {
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          error: colors.red.darken1,
           success: colors.green.accent3
         }
       }
