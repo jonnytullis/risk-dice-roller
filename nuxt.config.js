@@ -55,7 +55,16 @@ export default {
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.red.darken1,
+          error: colors.red.darken2,
+          success: colors.green.accent3
+        },
+        light: {
+          primary: colors.blue.darken4,
+          accent: colors.grey.darken3,
+          secondary: colors.grey.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.red.darken2,
           success: colors.green.accent3
         }
       }
