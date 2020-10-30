@@ -1,5 +1,5 @@
 <template>
-  <v-container :class="`d-flex flex-row justify-${justify}`">
+  <div :class="`d-flex flex-row justify-${justify}`">
     <div
       v-for="die in dice"
       class="mx-2 clickable"
@@ -13,7 +13,7 @@
         mdi-dice-{{ die.value }}
       </v-icon>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script lang="ts">
