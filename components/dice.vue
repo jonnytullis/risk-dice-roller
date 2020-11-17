@@ -12,6 +12,7 @@
       >
         mdi-dice-{{ die.value }}
       </v-icon>
+<!--      <v-icon color="grey" size="110" style="margin: -14px 0 0 -96px; position: absolute;">mdi-slash-forward</v-icon>-->
     </div>
   </div>
 </template>
