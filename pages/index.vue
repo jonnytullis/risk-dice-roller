@@ -4,8 +4,8 @@
       <v-row justify="center" class="my-4">
         <v-img src="risk-logo.png" :max-width="this.$vuetify.breakpoint.xsOnly ? '300' : '450'" />
       </v-row>
-      <v-row justify="center" class="mb-4">
-        <v-card class="pa-4" width="100%"  max-width="600px">
+      <v-row justify="center" class="mb-6">
+        <v-card class="pa-4" width="90%"  max-width="600px">
           <v-row>
             <v-col>
               <v-text-field
@@ -13,6 +13,7 @@
                 v-model="numAttackersStarting"
                 autofocus
                 outlined
+                hide-details
                 dense
                 type="number"
                 min="0"
@@ -26,6 +27,7 @@
                 ref="defendingUnitsInput"
                 v-model="numDefendersStarting"
                 outlined
+                hide-details
                 dense
                 type="number"
                 min="0"
@@ -34,7 +36,7 @@
                 :rules="numberRules"
               />
             </v-col>
-            <v-col cols="3" style="text-align: center">
+            <v-col cols="12" xl="3" lg="3" md="3" sm="3" style="text-align: center">
               <v-btn @click="resetNumUnitsLeft" :disabled="disableUnitUpdate">
                 Reset
               </v-btn>
@@ -71,9 +73,9 @@
           </v-row>
           <v-row>
             <v-spacer />
-            <v-btn color="secondary" :disabled="!numDefendersLeft || !numAttackersLeft" class="mr-2">
-              Resolve Battle
-            </v-btn>
+<!--            <v-btn color="secondary" :disabled="!numDefendersLeft || !numAttackersLeft" class="mr-2">-->
+<!--              Resolve Battle-->
+<!--            </v-btn>-->
             <v-btn @click="rollDice" :disabled="!numDefendersLeft || !numAttackersLeft" color="primary">
               Roll Dice
             </v-btn>
@@ -179,12 +181,12 @@ export default class Main extends Vue {
 
  .unitsLeft {
    font-size: 30px;
-   text-align: right;
+   text-align: center;
  }
 
  #wrapper {
    background-image: url(../static/map.jpg);
    background-size: cover;
-   height: 90vh;
+   height: 100vh;
  }
 </style>
