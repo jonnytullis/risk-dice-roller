@@ -119,9 +119,11 @@ export default class DiceRoller extends Vue {
   ]
 
   get disableSetUnits() {
+    // @ts-ignore
     if (this.$refs.attackingUnitsInput && this.$refs.attackingUnitsInput.hasError) {
       return true
     }
+    // @ts-ignore
     if (this.$refs.defendingUnitsInput && this.$refs.defendingUnitsInput.hasError) {
       return true
     }
