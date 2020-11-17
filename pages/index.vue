@@ -49,7 +49,7 @@
             <v-col cols="12" xl="8" lg="8" md="8" sm="8">
               <dice-view
                 ref="attackerDice"
-                :key="diceResetkey"
+                :key="diceResetKey"
                 class="dice"
                 num-dice="3"
                 :max-active="numAttackersLeft"
@@ -63,7 +63,7 @@
             <v-col cols="12" xl="8" lg="8" md="8" sm="8">
               <dice-view
                 ref="defenderDice"
-                :key="diceResetkey"
+                :key="diceResetKey"
                 class="dice"
                 num-dice="2"
                 color="black"
@@ -99,7 +99,7 @@ export default class Main extends Vue {
   numAttackersStarting: number | string = 3
   numDefendersStarting: number | string = 2
 
-  diceResetkey: number = 0
+  diceResetKey: number = 0
 
   numAttackersLeft: number = 3
   numDefendersLeft: number = 2
@@ -126,7 +126,7 @@ export default class Main extends Vue {
     if (!isNaN(defenders)) {
       this.numDefendersLeft = defenders
     }
-    this.diceResetkey++
+    this.diceResetKey++
   }
 
   rollDice() {
