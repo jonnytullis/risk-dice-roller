@@ -3,7 +3,11 @@
     <v-container>
       <v-row justify="center" class="my-4">
         <transition name="fade">
-          <v-img v-if="isMounted" src="risk-logo.png" :max-width="$vuetify.breakpoint.xsOnly ? '300' : '450'" />
+          <v-img
+            v-if="isMounted"
+            src="risk-logo.png"
+            :max-width="$vuetify.breakpoint.xsOnly ? '300' : '450'"
+          />
         </transition>
       </v-row>
       <v-row justify="center" class="mb-6">

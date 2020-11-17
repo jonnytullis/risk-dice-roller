@@ -38,9 +38,13 @@
       <div v-if="showDiceRoller">
         <v-row align="center">
           <v-col>
-            <units-display :attacker="true" :num-units="numAttackersLeft" />
+            <units-display
+              :attacker="true"
+              :num-attacking-units="numAttackersLeft"
+              :num-defending-units="numDefendersLeft"
+            />
           </v-col>
-          <v-col cols="12" xl="8" lg="8" md="8" sm="8">
+          <v-col cols="12" xl="7" lg="7" md="7" sm="7">
             <dice
               ref="attackerDice"
               :key="diceResetKey"
@@ -52,9 +56,13 @@
         </v-row>
         <v-row align="center" :class="this.$vuetify.breakpoint.xsOnly ? 'flex-column-reverse' : ''">
           <v-col>
-            <units-display :defender="true" :num-units="numDefendersLeft" />
+            <units-display
+              :defender="true"
+              :num-attacking-units="numAttackersLeft"
+              :num-defending-units="numDefendersLeft"
+            />
           </v-col>
-          <v-col cols="12" xl="8" lg="8" md="8" sm="8">
+          <v-col cols="12" xl="7" lg="7" md="7" sm="7">
             <dice
               ref="defenderDice"
               :key="diceResetKey"
