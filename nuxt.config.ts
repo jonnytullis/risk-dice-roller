@@ -1,3 +1,4 @@
+// @ts-ignore
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -41,6 +42,10 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+  ],
+
+  types: [
+    'vuetify'
   ],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
