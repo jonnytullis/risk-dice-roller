@@ -1,4 +1,4 @@
-# risk-dice-roller
+# Risk Dice Roller
 
 ## Build Setup
 
