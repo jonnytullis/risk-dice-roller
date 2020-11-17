@@ -15,16 +15,15 @@
         {{ numDefendingUnits }}
       </div>
     </v-chip>
-    <div class="ms-6">
+    <div class="ms-4" style="position: absolute; height: 50px; margin: 0 -180px -35px 0;">
       <v-slide-x-transition>
-        <v-row v-if="isWinner" justify="end" align="center" class="winner title px-2 mt-n6">
-          <v-icon color="warning" large class="mr-2">mdi-sword-cross</v-icon>
-          Victory!
+        <v-row v-if="isWinner" class="confetti pa-3 mt-n6">
+          <v-icon color="warning" x-large>mdi-trophy</v-icon>
         </v-row>
       </v-slide-x-transition>
       <v-slide-x-transition>
-        <v-row v-if="isLoser" justify="end" align="center" class="loser title px-2 mt-n6">
-          <v-icon color="black" large class="mr-2">mdi-emoticon-dead-outline</v-icon>
+        <v-row v-if="isLoser" class="title pa-3 mt-n6">
+          <v-icon color="black" x-large>mdi-emoticon-dead-outline</v-icon>
         </v-row>
       </v-slide-x-transition>
     </div>
@@ -69,15 +68,8 @@ export default class UnitsDisplay extends Vue {
 }
 </script>
 <style scoped>
-  .winner {
+  .confetti {
     background-image: url(../static/confetti.gif);
     background-size: cover;
-    height: 50px;
-    position: absolute;
-  }
-
-  .loser {
-    height: 50px;
-    position: absolute;
   }
 </style>

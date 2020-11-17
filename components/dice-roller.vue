@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row>
+    <v-row class="mb-2">
       <v-col>
         <v-text-field
           ref="attackingUnitsInput"
@@ -13,6 +13,7 @@
           :max="maxUnits"
           label="Attacking Units"
           :rules="numberRules"
+          class="mb-n5"
         />
       </v-col>
       <v-col>
@@ -26,6 +27,7 @@
           :max="maxUnits"
           label="Defending Units"
           :rules="numberRules"
+          class="mb-n5"
         />
       </v-col>
       <v-col cols="12" xl="3" lg="3" md="3" sm="3" style="text-align: center">
@@ -112,10 +114,17 @@ export default class DiceRoller extends Vue {
 
   numberRules = [
     (v: string) => !isNaN(Number.parseInt(v)) || 'Required',
-    (v: string) => Number.parseInt(v) > 0 || 'Must be greater than zero'
+    (v: string) => Number.parseInt(v) >= this.minUnits || `Must be ${this.minUnits} or more`,
+    (v: string) => Number.parseInt(v) <= this.maxUnits || `Must be ${this.maxUnits} or less`
   ]
 
   get disableSetUnits() {
+    if (this.$refs.attackingUnitsInput && this.$refs.attackingUnitsInput.hasError) {
+      return true
+    }
+    if (this.$refs.defendingUnitsInput && this.$refs.defendingUnitsInput.hasError) {
+      return true
+    }
     return Number.parseInt(this.numDefendersStarting.toString()) < this.minUnits ||
       Number.parseInt(this.numDefendersStarting.toString()) > this.maxUnits ||
       Number.parseInt(this.numAttackersStarting.toString()) < this.minUnits ||
