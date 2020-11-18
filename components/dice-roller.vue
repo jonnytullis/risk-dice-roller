@@ -32,7 +32,7 @@
       </v-col>
       <v-col cols="12" xl="3" lg="3" md="3" sm="3" style="text-align: center">
         <v-btn @click="setNumUnitsLeft" :disabled="disableSetUnits">
-          Set Units
+          {{ showDiceRoller ? 'Update Units' : 'Continue' }}
         </v-btn>
       </v-col>
     </v-row>
