@@ -1,5 +1,7 @@
 # Risk Dice Roller
 
+See deployed app at https://risk.jonnytullis.com/
+
 ## Build Setup
 
 ```bash
