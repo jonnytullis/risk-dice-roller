@@ -55,7 +55,7 @@ export default class UnitsDisplay extends Vue {
 
   get isLoser() {
     if (this.attacker) {
-      if (this.numAttackingUnits <= 0 && this.numDefendingUnits > 0) {
+      if (this.numAttackingUnits <= 1 && this.numDefendingUnits > 0) {
         return true
       }
     } else if (this.defender) {

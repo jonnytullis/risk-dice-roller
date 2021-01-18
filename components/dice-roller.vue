@@ -46,7 +46,7 @@
               :num-defending-units="numDefendersLeft"
             />
           </v-col>
-          <v-col cols="12" xl="7" lg="7" md="7" sm="7">
+          <v-col cols="12" xl="7" lg="7" md="9" sm="9">
             <dice
               ref="attackerDice"
               :key="diceResetKey"
@@ -64,7 +64,7 @@
               :num-defending-units="numDefendersLeft"
             />
           </v-col>
-          <v-col cols="12" xl="7" lg="7" md="7" sm="7">
+          <v-col cols="12" xl="7" lg="7" md="9" sm="9">
             <dice
               ref="defenderDice"
               :key="diceResetKey"
