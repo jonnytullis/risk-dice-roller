@@ -15,7 +15,7 @@
         {{ numDefendingUnits }}
       </div>
     </v-chip>
-    <div class="ms-4" style="position: absolute; height: 50px; margin: 0 -180px -35px 0;">
+    <div class="mt-4" style="position: absolute; right: 30px; height: 50px; width: 50px;">
       <v-slide-x-transition>
         <v-row v-if="isWinner" class="confetti pa-3 mt-n6">
           <v-icon color="warning" x-large>mdi-trophy</v-icon>
@@ -46,7 +46,7 @@ export default class UnitsDisplay extends Vue {
         return true
       }
     } else if (this.defender) {
-      if (this.numAttackingUnits <= 0 && this.numDefendingUnits > 0) {
+      if (this.numAttackingUnits <= 1 && this.numDefendingUnits > 0) {
         return true
       }
     }
